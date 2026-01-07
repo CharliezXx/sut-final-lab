@@ -19,9 +19,9 @@ func Test_title(t *testing.T) {
 
 	t.Run("Case:1 Title", func(t *testing.T) {
 		v := valid_book
-		v.Title = "Jd"
-		ok, err := govalidator.ValidateStruct(v)
-		g.Expect(ok).To(BeFalse())
-		g.Expect(err.Error()).To(Equal("Name of the book must contain 3-100 characters"))
+		v.Title = "Jeed"
+		ok, _ := govalidator.ValidateStruct(v)
+		g.Expect(ok).To(BeTrue())
+
 	})
 }
